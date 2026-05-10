@@ -1,0 +1,39 @@
+name: unilamapp
+description: "Aplikasi resmi Universitas La Tansa Mashiro"
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.5
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Paket untuk koneksi API
+  http: ^1.2.0
+
+  # Format tanggal dan angka
+  intl: ^0.19.0
+
+  # Tampil & simpan cache gambar (penting untuk performa)
+  cached_network_image: ^3.3.1
+
+  # Render konten HTML berita (pengganti parsing manual)
+  flutter_html: ^3.0.0-beta.2
+  # *Catatan: Jika butuh render gambar/video di dalam HTML, tambahkan ini juga:
+  # flutter_html_image: ^3.0.0-beta.2
+  # flutter_html_video: ^3.0.0-beta.2
+
+  # Ikon standar
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  #assets:
+  #  - assets/images/
