@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart'; // Tambah GetX
 import 'routes/app_routes.dart';
 
 void main() {
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp( // Ganti MaterialApp jadi GetMaterialApp
       title: 'UNILAM Berita',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -45,7 +46,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       initialRoute: AppRoutes.splash,
-      routes: AppRoutes.routes,
+      getPages: AppRoutes.routes, // Ganti 'routes' jadi 'getPages'
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../widgets/custom_app_bar.dart';
 import '../routes/app_routes.dart';
 
@@ -18,28 +19,30 @@ class HomeScreen extends StatelessWidget {
           mainAxisSpacing: 16,
           children: [
             _buildMenuCard(
-              context,
               icon: Icons.newspaper,
               title: 'Daftar Berita',
-              onTap: () => Navigator.pushNamed(context, AppRoutes.beritaList),
+              onTap: () => Get.toNamed(AppRoutes.beritaList),
             ),
             _buildMenuCard(
-              context,
               icon: Icons.info,
               title: 'Tentang Kampus',
-              onTap: () {},
+              onTap: () {
+                // Nanti bisa ditambahkan halaman Tentang Kampus
+              },
             ),
             _buildMenuCard(
-              context,
               icon: Icons.school,
               title: 'Akademik',
-              onTap: () {},
+              onTap: () {
+                // Nanti bisa ditambahkan halaman Akademik
+              },
             ),
             _buildMenuCard(
-              context,
               icon: Icons.people,
               title: 'Kemahasiswaan',
-              onTap: () {},
+              onTap: () {
+                // Nanti bisa ditambahkan halaman Kemahasiswaan
+              },
             ),
           ],
         ),
@@ -47,7 +50,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildMenuCard(BuildContext context, {required IconData icon, required String title, required VoidCallback onTap}) {
+  Widget _buildMenuCard({required IconData icon, required String title, required VoidCallback onTap}) {
     return InkWell(
       onTap: onTap,
       borderRadius: BorderRadius.circular(16),

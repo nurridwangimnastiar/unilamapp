@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../routes/app_routes.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -13,7 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Future.delayed(const Duration(seconds: 2), () {
-      Navigator.pushReplacementNamed(context, AppRoutes.home);
+      Get.offAllNamed(AppRoutes.home); // Ganti pushReplacement
     });
   }
 

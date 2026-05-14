@@ -1,7 +1,6 @@
-// lib/widgets/berita_card.dart
 import 'package:flutter/material.dart';
-import 'package:cached_network_image/cached_network_image.dart'; // <-- TAMBAHKAN INI
-import '../models/berita_model.dart'; // <-- UBAH PATHNYA KE models
+import 'package:cached_network_image/cached_network_image.dart';
+import '../models/berita_model.dart';
 import '../routes/app_routes.dart';
 
 class BeritaCard extends StatelessWidget {
@@ -19,7 +18,8 @@ class BeritaCard extends StatelessWidget {
       ),
       child: InkWell(
         onTap: () {
-          AppRoutes.navigateToBeritaDetail(context, berita.id, berita.title, berita.permalink);
+          // Navigasi pakai GetX
+          AppRoutes.navigateToBeritaDetail(berita.id, berita.title, berita.permalink);
         },
         borderRadius: BorderRadius.circular(12),
         child: Padding(
@@ -27,7 +27,6 @@ class BeritaCard extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Gambar Berita - PAKAI CachedNetworkImage
               ClipRRect(
                 borderRadius: BorderRadius.circular(8),
                 child: berita.imageUrl.isNotEmpty
@@ -57,7 +56,6 @@ class BeritaCard extends StatelessWidget {
                       ),
               ),
               const SizedBox(width: 12),
-              // Konten Teks
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
