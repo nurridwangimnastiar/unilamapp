@@ -1,3 +1,4 @@
+#lib/routes/app_routes.dart
 import 'package:get/get.dart';
 import '../screens/splash_screen.dart';
 import '../screens/home_screen.dart';

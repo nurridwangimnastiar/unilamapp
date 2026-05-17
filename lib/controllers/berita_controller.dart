@@ -1,3 +1,4 @@
+lib/controllers/berita_controller.dart
 import 'package:get/get.dart';
 import 'package:flutter/material.dart'; // ✅ TAMBAHKAN INI (supaya Colors & Color dikenali)
 import '../models/berita_model.dart';

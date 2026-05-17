@@ -1,5 +1,4 @@
 // lib/models/berita_model.dart
-
 class BeritaModel {
   final String id;
   final String title;
